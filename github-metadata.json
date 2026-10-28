@@ -1,0 +1,8 @@
+{
+  "owner": "ZhangJiShun",
+  "repository": "vps-clash-autopilot",
+  "visibility": "public",
+  "description": "AI Agent Skill for BandwagonHost/KiwiVM, 3X-UI and Clash Verge automation: VLESS Reality, Hysteria2, IPv4/IPv6, backups and connectivity checks. 搬瓦工 VPS 节点自动配置与验收。",
+  "topics": ["agent-skills", "codex", "claude-code", "computer-use", "vps", "bandwagonhost", "kiwivm", "3x-ui", "clash-verge", "mihomo", "ipv6", "vless", "reality", "hysteria2", "shadowrocket", "network-automation"],
+  "publish_gate": "User review of exact public files and validation gaps before remote creation or push."
+}

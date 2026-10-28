@@ -1,0 +1,108 @@
+{
+  "schema_version": "2.0.0",
+  "name": "vps-clash-autopilot",
+  "title": "VPS 与 Clash AI 自动配置",
+  "job_to_be_done": "Agent 接管已登录后台完成增量配置与真实验收，减少用户手工操作",
+  "trigger_surface": {
+    "description": "Use when asked to configure an authorized BandwagonHost/KiwiVM and existing 3X-UI VPS with computer use: preserve VLESS Reality, add IPv6/Hysteria2 (HY2), configure Clash Verge/Mihomo, export Shadowrocket QR codes, verify connectivity, switch proxy groups together, or roll back. 搬瓦工、3X-UI/3xu、Clash 自动配置、IPv6 节点、HY2 备用节点、小火箭二维码、代理组统一切换。Not for purchasing, payments, OS reinstall/reset, CAPTCHA bypass, or unrelated network changes.",
+    "should_trigger": [
+      "Configure BandwagonHost KiwiVM 3X-UI IPv6 Hysteria2 with computer use",
+      "Clash Verge export Shadowrocket QR codes",
+      "switch proxy groups together on my authorized VPS",
+      "搬瓦工 3xu HY2 备用节点自动配置"
+    ],
+    "should_not_trigger": [
+      "purchase a VPS and make payments",
+      "OS reinstall/reset",
+      "CAPTCHA bypass",
+      "write a recipe for dinner"
+    ],
+    "edge_cases": [
+      "Read-only assessment never grants write authority",
+      "IPv6 address allocation does not prove connectivity",
+      "Desktop success does not prove mobile pin support"
+    ]
+  },
+  "workflow": {
+    "steps": [
+      "Discover host capabilities and lock authorized VPS/Profile",
+      "Back up exact source and server resources privately",
+      "Use a working alternate connection before downtime",
+      "Verify IPv6 and existing dual-stack VLESS",
+      "Create separate HY2 with verified certificate trust",
+      "Test isolated candidates including wrong-pin rejection",
+      "Prepare, review, apply incremental YAML and reload actual runtime",
+      "Verify each node, proxy chains, TUN and browser; export mobile privately",
+      "Restore agreed defaults and deliver rollback record"
+    ],
+    "decision_points": [
+      "No IPv6: deliver IPv4 branch with explicit missing evidence",
+      "No domain: pinned certificate only if wrong-pin test rejects",
+      "No phone control: mobile acceptance pending",
+      "Unknown UI/version or changed source: stop affected writes"
+    ],
+    "failure_modes": [
+      "Wrong VPS/Profile modified",
+      "False acceptance based only on latency/HTTP status",
+      "Silent loss of mobile security parameters",
+      "Credentials leaked through logs/QR/repository",
+      "Concurrent edits overwritten",
+      "Partial selector switch not restored"
+    ]
+  },
+  "resources": {
+    "references": [
+      "references/helpers.md",
+      "references/preflight.md",
+      "references/security.md",
+      "references/troubleshooting.md",
+      "references/workflow.md"
+    ],
+    "scripts": [
+      "scripts/autopilot.py",
+      "scripts/common.py",
+      "scripts/profile_ops.py",
+      "scripts/release_check.py",
+      "scripts/runtime_ops.py"
+    ],
+    "assets": [],
+    "reports": []
+  },
+  "eval_plan": {
+    "trigger": [
+      "evals/trigger_cases.json"
+    ],
+    "output": [
+      "evals/output/cases.jsonl"
+    ],
+    "adversarial": [
+      "tests/test_autopilot.py",
+      "tests/test_release_check.py"
+    ],
+    "baseline": "observed previous helper behavior on a synthetic fixture; not a without-skill model benchmark"
+  },
+  "risk": {
+    "output_risk": "high",
+    "execution_risk": "high",
+    "trust_boundary": "external"
+  },
+  "governance": {
+    "owner": "Repository maintainers",
+    "maturity": "governed",
+    "review_cadence": "monthly",
+    "review_due": "2026-11-28"
+  },
+  "targets": [
+    "openai",
+    "claude",
+    "generic",
+    "agent-skills-compatible"
+  ],
+  "source_files": [
+    "SKILL.md",
+    "manifest.json",
+    "agents/interface.yaml",
+    "references/workflow.md",
+    "references/security.md"
+  ]
+}

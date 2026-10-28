@@ -1,0 +1,21 @@
+interface:
+  display_name: "VPS 与 Clash AI 自动配置"
+  short_description: "接管搬瓦工与 3X-UI，自动配置 IPv6、HY2 和 Clash 并验收"
+  default_prompt: "使用 $vps-clash-autopilot，授权后备份并接管 VPS/Clash，保留原配置，增加 IPv6/HY2 备用入口并实际验收。"
+compatibility:
+  canonical_format: "agent-skills"
+  adapter_targets: [openai, claude, generic]
+  activation:
+    mode: "manual"
+    paths: []
+  execution:
+    context: "inline"
+    shell: "bash"
+  trust:
+    source_tier: "local"
+    remote_inline_execution: "forbid"
+    remote_metadata_policy: "allow-metadata-only"
+  degradation:
+    openai: "requires host computer-use and terminal capabilities"
+    claude: "requires host computer-use and terminal capabilities"
+    generic: "no automatic permission or capability grants"

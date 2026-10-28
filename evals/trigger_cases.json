@@ -1,0 +1,52 @@
+{
+  "should_trigger": [
+    {
+      "text": "Configure BandwagonHost KiwiVM 3X-UI IPv6 Hysteria2 with computer use",
+      "family": "authorized-workflow"
+    },
+    {
+      "text": "Clash Verge export Shadowrocket QR codes",
+      "family": "authorized-workflow"
+    },
+    {
+      "text": "switch proxy groups together on my authorized VPS",
+      "family": "authorized-workflow"
+    },
+    {
+      "text": "搬瓦工 3xu HY2 备用节点自动配置",
+      "family": "authorized-workflow"
+    }
+  ],
+  "should_not_trigger": [
+    {
+      "text": "purchase a VPS and make payments",
+      "family": "excluded-or-unrelated"
+    },
+    {
+      "text": "OS reinstall/reset",
+      "family": "excluded-or-unrelated"
+    },
+    {
+      "text": "CAPTCHA bypass",
+      "family": "excluded-or-unrelated"
+    },
+    {
+      "text": "write a recipe for dinner",
+      "family": "excluded-or-unrelated"
+    }
+  ],
+  "near_neighbor": [
+    {
+      "text": "Explain the difference between TCP and UDP",
+      "family": "explanation-only"
+    },
+    {
+      "text": "Write a generic network glossary",
+      "family": "documentation-only"
+    },
+    {
+      "text": "Show a router buying guide",
+      "family": "unrelated"
+    }
+  ]
+}

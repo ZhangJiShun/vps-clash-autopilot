@@ -1,0 +1,53 @@
+{
+  "base_node": "Main",
+  "nodes": [
+    {
+      "name": "Main-IPv6",
+      "type": "vless",
+      "server": "2001:db8::2",
+      "port": 24443,
+      "uuid": "00000000-0000-4000-8000-000000000001",
+      "tls": true,
+      "udp": true,
+      "network": "tcp",
+      "flow": "xtls-rprx-vision",
+      "servername": "example.com",
+      "client-fingerprint": "chrome",
+      "reality-opts": {
+        "public-key": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "short-id": "aabbccdd"
+      }
+    },
+    {
+      "name": "Main-HY2-IPv4",
+      "type": "hysteria2",
+      "server": "192.0.2.10",
+      "port": 24443,
+      "password": "fixture-only-not-a-credential",
+      "sni": "node.example.invalid",
+      "fingerprint": "1111111111111111111111111111111111111111111111111111111111111111",
+      "skip-cert-verify": false,
+      "alpn": [
+        "h3"
+      ]
+    },
+    {
+      "name": "Main-HY2-IPv6",
+      "type": "hysteria2",
+      "server": "2001:db8::2",
+      "port": 24443,
+      "password": "fixture-only-not-a-credential",
+      "sni": "node.example.invalid",
+      "fingerprint": "1111111111111111111111111111111111111111111111111111111111111111",
+      "skip-cert-verify": false,
+      "alpn": [
+        "h3"
+      ]
+    }
+  ],
+  "groups": [
+    "Proxy",
+    "ClaudeProxy",
+    "OpenAIProxy"
+  ]
+}

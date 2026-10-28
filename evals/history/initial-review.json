@@ -1,0 +1,16 @@
+{
+  "type": "observed-local-regressions",
+  "date": "2026-10-28",
+  "failures": [
+    "HY2 port-hopping input accepted but omitted in mobile export",
+    "HEAD 302 mislabeled content acceptance",
+    "metadata enum and IR mismatch"
+  ],
+  "fixes": [
+    "Reject unsupported HY2 hopping/obfuscation before YAML and URI generation",
+    "Report only HTTP 2xx, never content acceptance",
+    "Use experimental/local metadata and synchronize IR"
+  ],
+  "evidence": "tests/test_autopilot.py",
+  "scope": "synthetic fixtures only; no model benchmark or live VPS acceptance"
+}

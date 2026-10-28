@@ -1,0 +1,42 @@
+# Synthetic fixture. Not usable as a real node.
+ipv6: false
+mixed-port: 17897
+mode: rule
+dns:
+  enable: true
+  ipv6: false
+  nameserver:
+  - https://dns.example.invalid/dns-query
+proxies:
+- name: Main
+  type: vless
+  server: 192.0.2.10
+  port: 24443
+  uuid: 00000000-0000-4000-8000-000000000001
+  tls: true
+  udp: true
+  network: tcp
+  flow: xtls-rprx-vision
+  servername: example.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    short-id: aabbccdd
+proxy-groups:
+- name: Proxy
+  type: select
+  proxies:
+  - Main
+  - DIRECT
+- name: ClaudeProxy
+  type: select
+  proxies:
+  - Main
+- name: OpenAIProxy
+  type: select
+  proxies:
+  - Main
+# Keep this routing comment unchanged.
+rules:
+- DOMAIN-SUFFIX,example.com,Proxy
+- MATCH,Proxy

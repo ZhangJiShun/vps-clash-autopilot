@@ -1,0 +1,29 @@
+{
+  "name": "vps-clash-autopilot",
+  "version": "0.1.0",
+  "owner": "Repository maintainers",
+  "updated_at": "2026-10-28",
+  "status": "experimental",
+  "maturity_tier": "governed",
+  "lifecycle_stage": "governed",
+  "context_budget_tier": "governed",
+  "review_cadence": "monthly",
+  "skill_ir_source": "skill-ir.json",
+  "skill_archetype": "governed",
+  "target_platforms": [
+    "openai",
+    "claude",
+    "generic",
+    "agent-skills-compatible"
+  ],
+  "factory_components": [
+    "references",
+    "scripts",
+    "tests",
+    "evals",
+    "agents",
+    "docs"
+  ],
+  "output_contract": "references/security.md",
+  "rollback_boundary": "references/security.md"
+}

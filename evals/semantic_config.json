@@ -1,0 +1,34 @@
+{
+  "positive_concepts": {
+    "vps_network_workflow": {
+      "weight": 1,
+      "phrases": [
+        "BandwagonHost",
+        "KiwiVM",
+        "3X-UI",
+        "Clash Verge",
+        "Shadowrocket",
+        "proxy groups",
+        "搬瓦工",
+        "3xu",
+        "HY2"
+      ]
+    }
+  },
+  "negative_concepts": {
+    "excluded": {
+      "weight": 1,
+      "exclusive": true,
+      "phrases": [
+        "payments",
+        "OS reinstall/reset",
+        "CAPTCHA bypass",
+        "recipe"
+      ]
+    }
+  },
+  "fallback_positive_concepts": [
+    "vps_network_workflow"
+  ],
+  "threshold": 0.6
+}
